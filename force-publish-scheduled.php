@@ -8,16 +8,17 @@
  * @link      https://github.com/barryceelen/wp-force-publish-scheduled
  * @copyright 2017 Barry Ceelen
  *
- * Plugin Name: Force Publish Scheduled Posts
- * Plugin URI:  http://github.com/barryceelen/wp-force-publish-scheduled
- * Description: Instantly publish scheduled posts via a Bulk Action.
- * Version:     1.0.0
- * Author:      Barry Ceelen
- * Author URI:  https://github.com/barryceelen
- * Text Domain: force-publish-scheduled
- * License:     GPL-3.0+
- * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
- * Domain Path: /languages
+ * Plugin Name:       Force Publish Scheduled Posts
+ * Plugin URI:        http://github.com/barryceelen/wp-force-publish-scheduled
+ * Description:       Instantly publish scheduled posts via a Bulk Action.
+ * Version:           1.0.0
+ * Author:            Barry Ceelen
+ * Author URI:        https://github.com/barryceelen
+ * Text Domain:       force-publish-scheduled
+ * License:           GPL-3.0+
+ * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
+ * Domain Path:       /languages
+ * GitHub Plugin URI: https://github.com/barryceelen/wp-force-publish-scheduled
  */
 
 // Don't load directly.
