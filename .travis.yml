@@ -14,4 +14,4 @@ before_install:
   - if [[ "$SNIFF" == "1" ]]; then phpenv rehash; fi
 
 script:
-  - if [[ "$SNIFF" == "1" ]]; then $PHPCS_DIR/bin/phpcs -p . --standard=WordPress --extensions=php; fi
+  - if [[ "$SNIFF" == "1" ]]; then $PHPCS_DIR/bin/phpcs -p . --standard=phpcs.ruleset.xml --extensions=php; fi
