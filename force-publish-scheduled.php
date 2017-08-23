@@ -36,9 +36,9 @@ if ( is_admin() ) {
 	 *
 	 * @since 1.0.0
 	 */
-	function myplugin_load_textdomain() {
+	function force_publish_scheduled_load_textdomain() {
 		load_plugin_textdomain( 'force-publish-scheduled', false, basename( dirname( __FILE__ ) ) . '/languages' );
 	}
 
-	add_action( 'plugins_loaded', 'myplugin_load_textdomain' );
+	add_action( 'plugins_loaded', 'force_publish_scheduled_load_textdomain' );
 }
