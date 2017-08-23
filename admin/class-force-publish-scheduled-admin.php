@@ -158,8 +158,8 @@ class Force_Publish_Scheduled_Admin {
 
 				$postarr = array(
 					'ID'            => $post_id,
-					'post_date'     => '',
-					'post_date_gmt' => '',
+					'post_date'     => current_time( 'mysql' ),
+					'post_date_gmt' => current_time( 'mysql', 1 ),
 					'post_status'   => 'publish',
 				);
 
