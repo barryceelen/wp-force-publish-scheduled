@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Force Publish Scheduled Posts\n"
-"POT-Creation-Date: 2017-08-23 20:22+0200\n"
+"POT-Creation-Date: 2017-09-04 19:54+0200\n"
 "PO-Revision-Date: 2017-08-23 20:09+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -20,14 +20,25 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: admin/class-force-publish-scheduled-admin.php:123
+#: admin/class-force-publish-scheduled-admin.php:54
 msgid "Publish"
 msgstr ""
 
-#: admin/class-force-publish-scheduled-admin.php:204
+#: admin/class-force-publish-scheduled-admin.php:55
+msgid "Unschedule"
+msgstr ""
+
+#: admin/class-force-publish-scheduled-admin.php:213
 #, php-format
-msgid "Published %d item."
-msgid_plural "Published %d items."
+msgid "%d item published."
+msgid_plural "%d items published."
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin/class-force-publish-scheduled-admin.php:219
+#, php-format
+msgid "%d item updated."
+msgid_plural "%d items updated."
 msgstr[0] ""
 msgstr[1] ""
 

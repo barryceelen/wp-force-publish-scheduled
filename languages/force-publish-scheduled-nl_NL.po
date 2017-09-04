@@ -1,33 +1,46 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: Force Publish Scheduled Posts\n"
-"POT-Creation-Date: 2017-08-23 20:23+0200\n"
-"PO-Revision-Date: 2017-08-23 20:24+0200\n"
+"POT-Creation-Date: 2017-09-04 19:52+0200\n"
+"PO-Revision-Date: 2017-09-04 19:54+0200\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.8.12\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: force-publish-scheduled.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Last-Translator: \n"
-"Language: nl_NL\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: admin/class-force-publish-scheduled-admin.php:123
+#: admin/class-force-publish-scheduled-admin.php:54
 msgid "Publish"
 msgstr "Publiceren"
 
-#: admin/class-force-publish-scheduled-admin.php:204
+#: admin/class-force-publish-scheduled-admin.php:55
+msgid "Unschedule"
+msgstr "Planning opheffen"
+
+#: admin/class-force-publish-scheduled-admin.php:213
 #, php-format
-msgid "Published %d item."
-msgid_plural "Published %d items."
+msgid "%d item published."
+msgid_plural "%d items published."
 msgstr[0] "%d item gepubliceerd."
 msgstr[1] "%d items gepubliceerd."
+
+#: admin/class-force-publish-scheduled-admin.php:219
+#, php-format
+msgid "%d item updated."
+msgid_plural "%d items updated."
+msgstr[0] "%d item bijgewerkt."
+msgstr[1] "%d items bijgewerkt."
 
 #. Plugin Name of the plugin/theme
 msgid "Force Publish Scheduled Posts"
@@ -48,3 +61,8 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://github.com/barryceelen"
 msgstr ""
+
+#~ msgid "Published %d item."
+#~ msgid_plural "Published %d items."
+#~ msgstr[0] "%d item gepubliceerd."
+#~ msgstr[1] "%d items gepubliceerd."

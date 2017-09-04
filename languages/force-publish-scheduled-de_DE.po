@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Force Publish Scheduled Posts\n"
-"POT-Creation-Date: 2017-08-23 20:17+0200\n"
-"PO-Revision-Date: 2017-08-23 20:19+0200\n"
+"POT-Creation-Date: 2017-09-04 19:54+0200\n"
+"PO-Revision-Date: 2017-09-04 19:57+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -20,16 +20,27 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: admin/class-force-publish-scheduled-admin.php:123
+#: admin/class-force-publish-scheduled-admin.php:54
 msgid "Publish"
 msgstr "Veröffentlichen"
 
-#: admin/class-force-publish-scheduled-admin.php:204
+#: admin/class-force-publish-scheduled-admin.php:55
+msgid "Unschedule"
+msgstr "Planung aufheben"
+
+#: admin/class-force-publish-scheduled-admin.php:213
 #, php-format
-msgid "Published %d item."
-msgid_plural "Published %d items."
-msgstr[0] "%d Eintrag veröffentlicht"
+msgid "%d item published."
+msgid_plural "%d items published."
+msgstr[0] "%d Eintrag veröffentlicht."
 msgstr[1] "%d Einträge veröffentlicht."
+
+#: admin/class-force-publish-scheduled-admin.php:219
+#, php-format
+msgid "%d item updated."
+msgid_plural "%d items updated."
+msgstr[0] "%d Eintrag aktualisiert."
+msgstr[1] "%d Einträge aktualisiert."
 
 #. Plugin Name of the plugin/theme
 msgid "Force Publish Scheduled Posts"
@@ -40,7 +51,7 @@ msgid "http://github.com/barryceelen/wp-force-publish-scheduled"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Imediately publish scheduled posts via a Bulk Action."
+msgid "Instantly publish scheduled posts via a Bulk Action."
 msgstr ""
 
 #. Author of the plugin/theme
@@ -50,3 +61,8 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://github.com/barryceelen"
 msgstr ""
+
+#~ msgid "Published %d item."
+#~ msgid_plural "Published %d items."
+#~ msgstr[0] "%d Eintrag veröffentlicht"
+#~ msgstr[1] "%d Einträge veröffentlicht."
