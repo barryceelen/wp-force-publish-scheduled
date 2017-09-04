@@ -11,7 +11,7 @@
  * Plugin Name:       Force Publish Scheduled Posts
  * Plugin URI:        http://github.com/barryceelen/wp-force-publish-scheduled
  * Description:       Instantly publish scheduled posts via a Bulk Action.
- * Version:           1.0.0
+ * Version:           1.1.0
  * Author:            Barry Ceelen
  * Author URI:        https://github.com/barryceelen
  * Text Domain:       force-publish-scheduled
