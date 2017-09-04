@@ -49,6 +49,12 @@ class Force_Publish_Scheduled_Admin {
 	 * @since 1.0.0
 	 */
 	private function __construct() {
+
+		$this->bulk_actions = array(
+			'force_publish_scheduled_publish' => __( 'Publish', 'force-publish-scheduled' ),
+			'force_publish_scheduled_draft'   => __( 'Unschedule', 'force-publish-scheduled' ),
+		);
+
 		/*
 		 * Add actions and filters.
 		 *
@@ -118,9 +124,9 @@ class Force_Publish_Scheduled_Admin {
 
 		global $wp_query;
 
-		// Look at $wp_query in stead of $_GET to make WPCS happy.
+		// Note: We're looking at $wp_query in stead of $_GET to make WPCS happy.
 		if ( $wp_query->is_main_query() && 'future' === $wp_query->get( 'post_status' ) ) {
-			$actions['force_publish_scheduled'] = __( 'Publish', 'force-publish-scheduled' );
+			$actions = array_merge( $actions, $this->bulk_actions );
 		}
 
 		return $actions;
@@ -137,7 +143,7 @@ class Force_Publish_Scheduled_Admin {
 	 */
 	function bulk_action_handler( $redirect_url, $doaction, $post_ids ) {
 
-		if ( 'force_publish_scheduled' !== $doaction ) {
+		if ( ! array_key_exists( $doaction, $this->bulk_actions ) ) {
 			return $redirect_url;
 		}
 
@@ -147,6 +153,7 @@ class Force_Publish_Scheduled_Admin {
 
 		$count   = 0;
 		$user_id = get_current_user_id();
+		$status  = str_replace( 'force_publish_scheduled_', '', $doaction );
 
 		foreach ( $post_ids as $post_id ) {
 
@@ -160,7 +167,7 @@ class Force_Publish_Scheduled_Admin {
 					'ID'            => $post_id,
 					'post_date'     => current_time( 'mysql' ),
 					'post_date_gmt' => current_time( 'mysql', 1 ),
-					'post_status'   => 'publish',
+					'post_status'   => $status,
 				);
 
 				$id = wp_update_post( $postarr );
@@ -174,6 +181,7 @@ class Force_Publish_Scheduled_Admin {
 		$redirect_url = add_query_arg(
 			array(
 				'force_publish_scheduled'       => $count,
+				'force_publish_scheduled_type'  => $status,
 				'force_publish_scheduled_nonce' => wp_create_nonce( 'force_publish_scheduled' ),
 			),
 			$redirect_url
@@ -199,12 +207,19 @@ class Force_Publish_Scheduled_Admin {
 
 			$count = intval( $_GET['force_publish_scheduled'] ); // WPCS: input var okay.
 
-			printf(
-				/* translators: %d: number of published posts */
-				'<div class="notice notice-success is-dismissible"><p>' . esc_html( _n( 'Published %d item.', 'Published %d items.', $count, 'force-publish-scheduled' ) ) . '</p></div>',
-				intval( $count )
-			);
-
+			if ( isset( $_GET['force_publish_scheduled_type'] ) && 'publish' === $_GET['force_publish_scheduled_type'] ) { // WPCS: input var okay.
+				printf(
+					/* translators: %d: number of published posts */
+					'<div class="notice notice-success is-dismissible"><p>' . esc_html( _n( '%d item published.', '%d items published.', $count, 'force-publish-scheduled' ) ) . '</p></div>',
+					intval( $count )
+				);
+			} else {
+				printf(
+					/* translators: %d: number of published posts */
+					'<div class="notice notice-success is-dismissible"><p>' . esc_html( _n( '%d item updated.', '%d items updated.', $count, 'force-publish-scheduled' ) ) . '</p></div>',
+					intval( $count )
+				);
+			}
 		}
 	}
 }
